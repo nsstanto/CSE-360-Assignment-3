@@ -78,6 +78,15 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() 
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		assertEquals("0", calc.getHistory());
+		calc.add(100);
+		assertEquals("0 + 100", calc.getHistory());
+		calc.divide(2);
+		calc.multiply(3);
+		calc.subtract(15);
+		assertEquals("0 + 100 / 2 * 3 - 15", calc.getHistory());
+		calc.divide(0);
+		assertEquals("0 + 100 / 2 * 3 - 15 / 0", calc.getHistory());
 	}
 }
