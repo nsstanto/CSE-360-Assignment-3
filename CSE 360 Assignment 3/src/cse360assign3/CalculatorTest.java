@@ -16,31 +16,63 @@ public class CalculatorTest {
 	@Test
 	public void testGetTotal() 
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		assertEquals(0, calc.getTotal()); 
+		calc.add(1);
+		assertEquals(1, calc.getTotal());
 	}
 
 	@Test
 	public void testAdd() 
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(2);
+		assertEquals(2, calc.getTotal());
+		calc.add(5);
+		assertEquals(2+5, calc.getTotal());
+		calc.add(7);
+		assertEquals(2+5+7, calc.getTotal());
 	}
 
 	@Test
 	public void testSubtract() 
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(20);
+		calc.subtract(5);
+		assertEquals(20-5, calc.getTotal());
+		calc.subtract(6);
+		assertEquals(20-5-6, calc.getTotal());
+		calc.subtract(7);
+		assertEquals(20-5-6-7, calc.getTotal());
 	}
 
 	@Test
 	public void testMultiply() 
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(20);
+		calc.multiply(2);
+		assertEquals(20*2, calc.getTotal());
+		calc.multiply(3);
+		assertEquals(20*2*3, calc.getTotal());
+		calc.multiply(4);
+		assertEquals(20*2*3*4, calc.getTotal());
 	}
 
 	@Test
 	public void testDivide() 
 	{
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(100);
+		calc.divide(2);
+		assertEquals(100/2, calc.getTotal());
+		calc.divide(3);
+		assertEquals((100/2)/3, calc.getTotal());
+		calc.divide(1);
+		assertEquals((100/2)/3, calc.getTotal());
+		calc.divide(0);
+		assertEquals(0, calc.getTotal());
 	}
 
 	@Test
